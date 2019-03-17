@@ -48,7 +48,14 @@ public class VehicleInsuranceDaoImpl implements VehicleInsuranceDao {
 				c.setTime(sdf.parse(dt));
 				c.add(Calendar.DATE, days);  // number of days to add
 				dt2 = sdf.format(c.getTime());
-				customer.setDateOfR(dt);
+				customer.setDateOfR(dt2);
+				String arr1[]=dt.split("/");
+				String arr2[]=dt2.split("/");
+				int y1=Integer.parseInt(arr1[2]);
+				int y2=Integer.parseInt(arr2[2]);
+				//System.out.println((y2-y1)*365);
+				customer.setDaysRemaining((y2-y1)*365);
+				
 				
 				
 			} catch (ParseException e) {

@@ -38,7 +38,10 @@ public class App {
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 			Date date = new Date();
 			String s = formatter.format(date);
-			//System.out.println(s);
+			
+			
+			
+			
 			customer.setDateOfR(s);
 			boolean b =serv.registration(vehicle, customer);
 			if(b==true)
@@ -50,9 +53,10 @@ public class App {
 			System.out.println("Enter the vehicleNo");
 			int vehicleNo = sc.nextInt();
 			customer=serv.validity(vehicleNo);
-			if(customer!= null)
+			if(customer!= null) {
 			System.out.println(" your insurance expires on  "+customer.getDateOfR());
-			
+			System.out.println(" Days remaining are :  "+customer.getDaysRemaining());
+			}
 			else
 			{
 				try {

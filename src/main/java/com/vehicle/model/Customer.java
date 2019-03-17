@@ -7,7 +7,7 @@ private int insurancePeriod;
 private long aadharNo;
 private long mobileNo;
 private String dateOfR;
-
+private int daysRemaining;
 
 public String getDateOfR() {
 	return dateOfR;
@@ -40,7 +40,13 @@ public long getMobileNo() {
 public void setMobileNo(long mobileNo) {
 	this.mobileNo = mobileNo;
 }
-
+public int getDaysRemaining() {
+	return daysRemaining;
+}
+public void setDaysRemaining(int daysRemaining) {
+	this.daysRemaining = daysRemaining;
+}
+ 
 
 
 }
